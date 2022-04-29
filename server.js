@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const workOutsController = require('./routes/api/workouts');
+const nutruitionController = require('./routes/api/nutruition');
 
 require('dotenv').config();
 require('./config/database');
@@ -19,6 +21,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Check if token and create req.user
 app.use(require('./config/checkToken'));
+
+app.use('/api/workouts', workOutsController);
+
+app.use('/api/nutruition', nutruitionController);
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));

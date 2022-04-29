@@ -1,6 +1,6 @@
 export default function HomePage(props) {
     return (
      <div>
-        <h1>HomePage</h1>
+        <h1>JSHRED</h1>
      </div>
     )};

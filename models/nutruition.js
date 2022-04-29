@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const workOutsSchema = new Schema({
+const nurtruitionSchema = new Schema({
 img:  String,
 name: String,
 details: String,
 category: String,
-
+url: String,
 })
 
 // make  model
 
-module.exports = mongoose.model("Workouts", workOutsSchema );
+module.exports = mongoose.model("Nutruition", nurtruitionSchema );

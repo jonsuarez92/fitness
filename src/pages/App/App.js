@@ -16,8 +16,10 @@ function App() {
       {
         user ? 
         <Routes>
-          <Route path="/home/new" element={<HomePage/>}/>
-          <Route path="/workouts/new" element={<WorkOutPage/>}/>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/workouts" element={<WorkOutPage/>}/>
+          <Route path='/workouts/new' element={<WorkOutPage/>}/> 
+          <Route path="/nutrition" element={<NutritionPage/>}/>
           <Route path="/nutrition/new" element={<NutritionPage/>}/>
         </Routes>:
         <AuthPage setUser={setUser}/>
