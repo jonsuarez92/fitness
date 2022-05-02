@@ -14,9 +14,9 @@ router.route('/').get(getNutruition).post(setNutruition)
 // router.get("/", getNutruition) 
 // router.post('/', setNutruition )
 
-router.route('/:id').delete(deleteNutruition).put(updateNutruition)
+router.route('/:id').delete(deleteNutruition)
 //  Update
-// router.put('/:id', updateNutruition)
+router.put('/:id', updateNutruition)
 // delete
 // router.delete('/:id', deleteNutruition)
 

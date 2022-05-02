@@ -4,11 +4,14 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const workOutsController = require('./routes/api/workouts');
 const nutruitionController = require('./routes/api/nutruition');
+const cors = require('cors');
 
 require('dotenv').config();
 require('./config/database');
 
 const app = express();
+
+app.use(cors());
 
 app.use(logger('dev'));
 // there's no need to mount express.urlencoded middleware

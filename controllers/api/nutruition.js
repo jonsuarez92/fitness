@@ -25,11 +25,14 @@ const setNutruition = async (req,res)=>{
         res.status(400).json({ err: error.message })
     }
 }
+
+
 //getNutruition
 //@route update/api/nutruition/:id
 //assess private admin
 
 const updateNutruition = (req,res)=>{
+    const {body} = req 
     Nutruition.findByIdAndUpdate(req.params.id, body,{new: true}, (err, updatedNutrution) => {
         if (!err) {
           res.status(200).json(updatedNutrution)
@@ -52,10 +55,10 @@ const deleteNutruition = (req,res)=>{
     })
 }
 
-const showNutruition = (rec,res)=>{
-    Nutruition.findById(req.params.id, (err, foundNutruition)=>{
+const showNutruition = (req,res)=>{
+    Nutruition.findById(req.params.id, (err, superMan)=>{
         if (!err) {
-            res.status(200).json(foundNutruition)
+            res.status(200).json({message:'here the show', superMan})
           } else {
             res.status(400).json(err)
           }
