@@ -6,6 +6,7 @@ img:  String,
 name: String,
 details: String,
 category: String,
+des: String,
 
 })
 

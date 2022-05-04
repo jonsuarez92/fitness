@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const nurtruitionSchema = new Schema({
+const suppsSchema = new Schema({
 img:  String,
 name: String,
 goodDetail: String,
@@ -13,4 +13,4 @@ url: String,
 
 // make  model
 
-module.exports = mongoose.model("Nutruition", nurtruitionSchema );
+module.exports = mongoose.model("Supp", suppsSchema );

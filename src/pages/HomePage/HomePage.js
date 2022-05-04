@@ -1,6 +1,8 @@
 export default function HomePage(props) {
     return (
-     <div>
-        <h1>JSHRED</h1>
+      <div className="homeBackGround">
+     <header>
+        <h1 className="authH">JSHRED</h1>
+     </header>
      </div>
     )};

@@ -36,3 +36,130 @@
     transform: rotate(360deg);
   }
 }
+.homeBackGround {
+  background-image: url(https://cdn.dribbble.com/users/1692428/screenshots/9770125/media/6bb2a6119e1e50333208bf26a0826a75.jpg?compress=1&resize=400x300);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.authBackGround {
+  background-image: url(https://i.pinimg.com/originals/32/1c/e9/321ce9f5f48596a733d91e8f8d269808.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.authH {
+  color: gold;
+}
+
+.nutListWrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card {
+  height: 400px;
+}
+
+.card-body {
+  overflow: scroll;
+}
+.nutBackGround {
+  background-image: url(https://img.mensxp.com/media/content/2018/Jul/there-no-such-thing-as-good-food-and-bad-food-1400x653-1531487950.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.deal {
+  color: rgb(29, 149, 204);
+  font-size: large;
+  font-weight: bolder;
+  font-style: italic;
+}
+.supH {
+  color: gold;
+}
+.supBackGround {
+  background-image: url(https://www.mensjournal.com/wp-content/uploads/2021/04/proteinpowdermain.jpg?w=1800&h=1012&crop=1&quality=86&strip=all);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.supDeal {
+  color: rgb(250, 249, 246);
+  font-size: large;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+/* display this row with flex and use wrap (= respect columns' widths)  for workouts*/
+.workH {
+  color: whitesmoke;
+}
+.workOutBackGround {
+  background-image: url(https://img1.goodfon.com/original/1920x1168/7/26/shtanga-trenazhernyy-zal-gym.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* vertical spacing between columns */
+
+[class*="col-"] {
+  margin-bottom: 30px;
+}
+
+.content {
+  height: 100%;
+  padding: 20px 20px 10px;
+  color: #fff;
+}
+
+/* Demo backgrounds and styling*/
+
+.colour-1 {
+  background: grey;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.colour-2 {
+  background: #cf1020;
+  opacity: 0.7;
+}
+
+.colour-3 {
+  background: grey;
+  opacity: 0.7;
+}
+
+.colour-4 {
+  background: #cf1020;
+  opacity: 0.7;
+}
+
+.colour-5 {
+  background: grey;
+  opacity: 0.7;
+}
+
+.colour-6 {
+  background: #cf1020;
+  opacity: 0.7;
+}
+
+body {
+  padding: 20px 0;
+  font-family: Roboto, sans-serif;
+}
+
+.content h3 {
+  margin-top: 0px;
+  font-weight: 300;
+}

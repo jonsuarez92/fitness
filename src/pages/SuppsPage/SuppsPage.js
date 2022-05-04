@@ -1,29 +1,30 @@
+
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import { useEffect, useState } from 'react';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
-
-export default function NutritionPage(props) {
-    const [nutList, setNutList] = useState([])
+export default function SuppsPages({ user, setUser }) {
+    const [supList, setSupList] = useState([])
 
     useEffect(()=>{
         (async ()=> {
             try{
-        const response = await axios.get('http://localhost:3001/api/nutruition')
-        setNutList(response.data)
+        const response = await axios.get('http://localhost:3001/api/supps')
+        setSupList(response.data)
         console.log('text')
-        console.log(nutList)
+        console.log(supList)
             }catch(err){
             console.log(err)
             }
         })()
     },[])
     return (
-     <div className="nutBackGround">
-        <h1>Good Vs Bad</h1>
+     <div className="supBackGround">
+        <h1 className="supH">Supplements</h1>
 
      <div className="nutListWrapper">   
-    {nutList.map((nut, i) => {
+    {supList.map((sup, i) => {
         return(
         //  <div key={i}>
         //      <Link to = {`/nutrition/${nut._id}`}>
@@ -32,13 +33,13 @@ export default function NutritionPage(props) {
         //     {console.log(nut.img)}
         //     <p>{` ${nut.des}`}</p>
         //  </div>
-            <Link to = {`/nutrition/${nut._id}`}>
-        
+            <Link to = {`/supps/${sup._id}`}>
+            <UserLogOut user={user} setUser={setUser} />
         <div key={i} className="card" style={{width: "18rem"}}>
-         <img className="card-img-top" src={nut.img} alt="" alt="Card image cap"/>
+         <img className="card-img-top" src={sup.img} alt="" alt="Card image cap"/>
          <div className="card-body">
-           <h5 className="card-title">{nut.name}</h5>
-           <p className="card-text">{nut.des}</p>
+           <h5 className="card-title">{sup.name}</h5>
+           <p className="card-text">{sup.des}</p>
          <button className="btn btn-primary">Go Here</button> 
          </div>
        </div>

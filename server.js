@@ -4,6 +4,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const workOutsController = require('./routes/api/workouts');
 const nutruitionController = require('./routes/api/nutruition');
+const suppsController = require('./routes/api/supps')
 const cors = require('cors');
 
 require('dotenv').config();
@@ -25,9 +26,12 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Check if token and create req.user
 app.use(require('./config/checkToken'));
 
+// routes 
 app.use('/api/workouts', workOutsController);
 
 app.use('/api/nutruition', nutruitionController);
+
+app.use('/api/supps', suppsController);
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));

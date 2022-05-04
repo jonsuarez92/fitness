@@ -18,9 +18,14 @@ const NutruitionShowPage = () => {
         })()
     },[])
   return (
-    <div>
-        
+    <div className="nutBackGround">
+        <h1>{`Good ${show.name}`}</h1>
     <p>{`this item name is: ${show.name}`}</p>
+    <p className="deal">{`${show.goodDetail}`}</p>
+     <h1>{`Bad ${show.name}`}</h1>
+     <p className="deal">{`${show.badDetail}`}</p>
+
+    <a href = {`/nutrition`}><button>Back button</button></a>
     
     </div>
     
