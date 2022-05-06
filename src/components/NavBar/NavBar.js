@@ -18,16 +18,7 @@ const Navbar = () => {
       <li className="nav-item">
         <a className="nav-link" href="/Workouts">Workouts</a>
       </li>
-      <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown dont work!
-        </a>
-        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a className="dropdown-item" href="/nutrition">Nutruition</a>
-          <a className="dropdown-item" href="/supps">Supplements</a>
-          <a className="dropdown-item" href="/workouts">Workouts</a>
-        </div>
-      </li>
+      
      </ul>
   </div>
 </nav>
