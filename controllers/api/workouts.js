@@ -1,10 +1,10 @@
-const WorkOut = require('../../models/workouts')
+const WorkOuts = require('../../models/workouts')
 //getNutruition
 //@route get/api/nutruition
 //assess private admin
 
 const getWorkOut = (req,res)=>{
-    WorkOut.find({}, (err, foundWorkOuts) => {
+    WorkOuts.find({}, (err, foundWorkOuts) => {
         if (!err) {
           res.status(200).json(foundWorkOuts)
         } else {
@@ -19,7 +19,7 @@ const getWorkOut = (req,res)=>{
 const setWorkOut = async (req,res)=>{
     try {
         const { body } = req
-        const createdWorkOut = await WorkOut.create(body)
+        const createdWorkOut = await WorkOuts.create(body)
         res.status(200).json({ message: "Item Created!", createdWorkOut })
     } catch (error) {
         res.status(400).json({ err: error.message })
@@ -33,7 +33,7 @@ const setWorkOut = async (req,res)=>{
 
 const updateWorkOut = (req,res)=>{
     const {body} = req 
-    WorkOut.findByIdAndUpdate(req.params.id, body,{new: true}, (err, updatedWorkOut) => {
+    WorkOuts.findByIdAndUpdate(req.params.id, body,{new: true}, (err, updatedWorkOut) => {
         if (!err) {
           res.status(200).json(updatedWorkOut)
         } else {
@@ -46,9 +46,9 @@ const updateWorkOut = (req,res)=>{
 //assess private admin
 
 const deleteWorkOut = (req,res)=>{
-    WorkOut.findByIdAndDelete(req.params.id, (err)=>{
+    WorkOuts.findByIdAndDelete(req.params.id, (err)=>{
         if (!err) {
-            res.status(200).json({message: "Deleted nutruition"})
+            res.status(200).json({message: "Deleted workout"})
           } else {
             res.status(400).json(err)
           }
@@ -56,9 +56,9 @@ const deleteWorkOut = (req,res)=>{
 }
 
 const showWorkOut = (req,res)=>{
-    WorkOut.findById(req.params.id, (err, superMan)=>{
+    WorkOuts.findById(req.params.id, (err, workOut)=>{
         if (!err) {
-            res.status(200).json({message:'here the show', superMan})
+            res.status(200).json({message:'here the show', workOut})
           } else {
             res.status(400).json(err)
           }
@@ -71,4 +71,4 @@ module.exports = {
     updateWorkOut,
     deleteWorkOut,
     showWorkOut
-}
+}  

@@ -109,57 +109,17 @@
   flex-wrap: wrap;
 }
 
-/* vertical spacing between columns */
-
-[class*="col-"] {
-  margin-bottom: 30px;
+.workOutImg {
+  width: 100%;
 }
 
-.content {
-  height: 100%;
-  padding: 20px 20px 10px;
-  color: #fff;
+.workOutListWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-around;
 }
 
-/* Demo backgrounds and styling*/
-
-.colour-1 {
-  background: grey;
-  color: #fff;
-  opacity: 0.7;
-}
-
-.colour-2 {
-  background: #cf1020;
-  opacity: 0.7;
-}
-
-.colour-3 {
-  background: grey;
-  opacity: 0.7;
-}
-
-.colour-4 {
-  background: #cf1020;
-  opacity: 0.7;
-}
-
-.colour-5 {
-  background: grey;
-  opacity: 0.7;
-}
-
-.colour-6 {
-  background: #cf1020;
-  opacity: 0.7;
-}
-
-body {
-  padding: 20px 0;
-  font-family: Roboto, sans-serif;
-}
-
-.content h3 {
-  margin-top: 0px;
-  font-weight: 300;
+.workOutContainer {
+  border: black;
 }
