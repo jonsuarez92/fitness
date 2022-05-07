@@ -24,13 +24,10 @@ This website was intended as a passion project for myself and anyone else who lo
 
 ## For Developers
 
-````
+```
 
 ## Getting Started
-![Signup Form](/public/assets/signup_form.png)
-* You will be taken to a sign-up form where you will be able to sign up using your name, email address, and created password. <br />
-![Login Form](/public/assets/login_form.png)
-* Once you have signed up, you should be taken to the home page. Or if you are logged out, press ```Go to login form``` in order to log in. You should be taken to the home page unless your credentials do not match.
+
 
 ## Features
 ![Home Page]
@@ -44,4 +41,4 @@ This website was intended as a passion project for myself and anyone else who lo
 ## Credits
 source on how a website should look like
 * Special thanks to Anthony R, Moses B, Roy D, and the GA instructors for helping me put together this project
-````
+```
