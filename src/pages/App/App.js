@@ -27,7 +27,7 @@ function App() {
        <>
        <Navbar/>
        <Routes>
-         <Route path="/" element={<HomePage/>}/>
+         <Route path="/" element={<HomePage user={user} setUser={setUser}/>}/>
           <Route path="/workouts" element={<WorkOutPage setChoosenWorkOut={setChoosenWorkOut}/>}/>
           <Route path="/workouts/:id" element={<WorkOutShowPage choosenWorkOut={choosenWorkOut}/>}/>
           <Route path="/supps" element={<SuppsPages user={user} setUser={setUser}/>}/>

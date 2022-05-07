@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 
 
-export default function HomePage( user, setUser ) {
+export default function HomePage ( { user, setUser }) {
   
     return (
       <div className="homeBackGround">

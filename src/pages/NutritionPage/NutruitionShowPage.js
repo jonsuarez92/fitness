@@ -6,11 +6,11 @@ import axios from 'axios'
 const NutruitionShowPage = () => {
     const {id} = useParams()
     const [show, setShow] = useState({})
-
+   
     useEffect(()=>{
         (async ()=> {
-            try{
-        const response = await axios.get(`https://gym-life.herokuapp.com/api/nutruition${id}`)
+            try{  
+        const response = await axios.get(`https://gym-life.herokuapp.com/api/nutruition/${id}`)
         setShow(response.data.superMan)
             }catch(err){
             console.log(err)
