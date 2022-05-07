@@ -11,7 +11,7 @@ export default function WorkOutPage({setChoosenWorkOut}) {
     useEffect(()=>{
         (async ()=> {
             try{
-        const response = await axios.get('http://localhost:3001/api/workouts')
+        const response = await axios.get('https://gym-life.herokuapp.com/ ')
         setWorkOutList(response.data)
         console.log('text')
         console.log(workOutList)

@@ -12,7 +12,7 @@ const WorkOutShowPage = ({choosenWorkOut}) => {
     useEffect(()=>{
         (async ()=> {
             try{
-        const response = await axios.get(`http://localhost:3001/api/Workouts/${id}`)
+        const response = await axios.get(`https://gym-life.herokuapp.com/${id}`)
         setShow(response.data.workOut)
             }catch(err){
             console.log(err)
