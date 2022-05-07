@@ -9,7 +9,7 @@ export default function NutritionPage(props) {
     useEffect(()=>{
         (async ()=> {
             try{
-        const response = await axios.get('https://gym-life.herokuapp.com/nutrition')
+        const response = await axios.get('https://gym-life.herokuapp.com/api/nutrition')
         setNutList(response.data)
         console.log('text')
         console.log(nutList)

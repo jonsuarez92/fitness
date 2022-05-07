@@ -9,7 +9,7 @@ export default function SuppsPages({ user, setUser }) {
     useEffect(()=>{
         (async ()=> {
             try{
-        const response = await axios.get('https://gym-life.herokuapp.com/supps ')
+        const response = await axios.get('https://gym-life.herokuapp.com/api/supps ')
         setSupList(response.data)
         console.log('text')
         console.log(supList)
