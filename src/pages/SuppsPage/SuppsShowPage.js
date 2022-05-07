@@ -10,7 +10,7 @@ const SuppsShowPage = () => {
     useEffect(()=>{
         (async ()=> {
             try{
-        const response = await axios.get(`https://gym-life.herokuapp.com/${id}`)
+        const response = await axios.get(`https://gym-life.herokuapp.com/supps${id}`)
         setShow(response.data.superMan)
             }catch(err){
             console.log(err)
