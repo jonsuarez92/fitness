@@ -54,6 +54,22 @@ input {
   width: 250px;
   opacity: 0.8;
 }
+
+.about-container {
+  margin: auto;
+  padding: 3vmin;
+  background-color: grey;
+  border: 0.1vmin solid;
+  border-radius: 1vmin;
+  width: 250px;
+  opacity: 0.8;
+}
+.about-h {
+  color: gold;
+}
+.about-p {
+  color: whitesmoke;
+}
 .homeBackGround {
   background-image: url(https://cdn.dribbble.com/users/1692428/screenshots/9770125/media/6bb2a6119e1e50333208bf26a0826a75.jpg?compress=1&resize=400x300);
   background-size: cover;
