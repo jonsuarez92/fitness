@@ -20,7 +20,7 @@ export default function CreateWorkouts(props) {
         input.preventDefault()
         try {
             console.log(img.current.value)
-            // try is where we building the object 
+            // try is where we building the object csac
             await axios.post('/api/workouts', {
                 img: img.current.value,
                 name: name.current.value,
