@@ -1,11 +1,11 @@
 import React from "react";
 
-function AboutPopUp (props) {
-  return (props.trigger) ?(
+function AboutPopUp ({timePopUp, setTimePopUp, children}) {
+  return (timePopUp) ?(
     <div className="about-container"> 
       <div className="">
-      <button className="about-close"onClick={(()=> props.setTrigger(false))}> close </button> 
-      {props.children}
+      <button className="about-close"onClick={(()=> setTimePopUp(false))}> close  </button> 
+      {children}
       </div> 
       </div>
   ) : "";
