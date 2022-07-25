@@ -32,7 +32,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage user={user} setUser={setUser} />} />
               <Route path="/createWorkouts" element={< Createworkouts />} />
-              <Route path="/editWorkouts/:id" element={< EditWorkOut />} />
+              <Route path="/editWorkouts/:id" element={< EditWorkOut choosenWorkOut={choosenWorkOut} />} />
               <Route path="/workouts" element={<WorkOutPage setChoosenWorkOut={setChoosenWorkOut} />} />
               <Route path="/workouts/:id" element={<WorkOutShowPage choosenWorkOut={choosenWorkOut} />} />
               <Route path="/supps" element={<SuppsPages user={user} setUser={setUser} />} />
