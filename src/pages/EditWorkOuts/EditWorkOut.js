@@ -33,10 +33,10 @@ export default function EditWorkouts({ choosenWorkOut }) {
                 category: category.current.value,
                 des: des.current.value,
                 img1: img1.current.value,
-                img1: img2.current.value,
-                img1: img3.current.value,
-                img1: img4.current.value,
-                img1: img5.current.value,
+                img2: img2.current.value,
+                img3: img3.current.value,
+                img4: img4.current.value,
+                img5: img5.current.value,
             })
             // -1 is the same as hitting the back button
             navigate('/workouts')
@@ -59,34 +59,37 @@ export default function EditWorkouts({ choosenWorkOut }) {
         }
     }
     return (
-
-        <div>
-            <h1>Edit Workout</h1>
-            <form onSubmit={handleSubmit}>
-                <p>Image</p>
-                <input defaultValue={choosenWorkOut.bannerImg} placeholder='Enter a image' type="text" ref={bannerImg} />
-                <p>Name Of Workout</p>
-                <input defaultValue={choosenWorkOut.name} placeholder='Enter a image' type="text" ref={name} />
-                <p>Details Of Workout</p>
-                <textarea defaultValue={choosenWorkOut.details} placeholder='Enter a image' type="text" ref={details} />
-                <p>Image 1 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img1} />
-                <p>Image 2 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img2} />
-                <p>Image 3 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img3} />
-                <p>Image 4 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img4} />
-                <p>Image 5 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img5} />
-                <p>Category For Workouts</p>
-                <input defaultValue={choosenWorkOut.category} placeholder='Enter a image' type="text" ref={category} />
-                <p>description Of Workouts</p>
-                <textarea defaultValue={choosenWorkOut.des} placeholder='Enter a image' type="text" ref={des} />
-                <input type="submit" value="update workout" />
-            </form>
-            <button onClick={() => { handledelete(choosenWorkOut._id) }}>Delete Workout</button>
-        </div>
+        <>
+            <div className="create-body">
+                <div >
+                    <h1>Edit Workout</h1>
+                    <form className="create-form-container" onSubmit={handleSubmit}>
+                        <p>Image</p>
+                        <input defaultValue={choosenWorkOut.bannerImg} placeholder='Enter a image' type="text" ref={bannerImg} />
+                        <p>Name Of Workout</p>
+                        <input defaultValue={choosenWorkOut.name} placeholder='Enter a image' type="text" ref={name} />
+                        <p>Details Of Workout</p>
+                        <textarea defaultValue={choosenWorkOut.details} placeholder='Enter a image' type="text" ref={details} />
+                        <p>Image 1 Of Workout</p>
+                        <input placeholder='Enter Day of workout' type="text" ref={img1} />
+                        <p>Image 2 Of Workout</p>
+                        <input placeholder='Enter Day of workout' type="text" ref={img2} />
+                        <p>Image 3 Of Workout</p>
+                        <input placeholder='Enter Day of workout' type="text" ref={img3} />
+                        <p>Image 4 Of Workout</p>
+                        <input placeholder='Enter Day of workout' type="text" ref={img4} />
+                        <p>Image 5 Of Workout</p>
+                        <input placeholder='Enter Day of workout' type="text" ref={img5} />
+                        <p>Category For Workouts</p>
+                        <input defaultValue={choosenWorkOut.category} placeholder='Enter a image' type="text" ref={category} />
+                        <p>description Of Workouts</p>
+                        <textarea defaultValue={choosenWorkOut.des} placeholder='Enter a image' type="text" ref={des} />
+                        <input type="submit" value="update workout" />
+                    </form>
+                    <button onClick={() => { handledelete(choosenWorkOut._id) }}>Delete Workout</button>
+                </div>
+            </div>
+        </>
     )
 }
 

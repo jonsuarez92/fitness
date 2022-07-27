@@ -33,10 +33,10 @@ export default function CreateWorkouts(props) {
                 category: category.current.value,
                 des: des.current.value,
                 img1: img1.current.value,
-                img1: img2.current.value,
-                img1: img3.current.value,
-                img1: img4.current.value,
-                img1: img5.current.value,
+                img2: img2.current.value,
+                img3: img3.current.value,
+                img4: img4.current.value,
+                img5: img5.current.value,
             })
             navigate('/workouts')
         } catch (err) {
@@ -45,9 +45,9 @@ export default function CreateWorkouts(props) {
     }
     return (
 
-        <div>
+        <div className="create-body" >
             <h1>Creating New Workout</h1>
-            <form onSubmit={handleSubmit}>
+            <form className="create-form-container" onSubmit={handleSubmit}>
                 <p>Image</p>
                 <input placeholder='Enter a image' type="text" ref={bannerImg} />
                 <p>Name Of Workout</p>

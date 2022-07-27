@@ -143,9 +143,9 @@ input {
   flex-wrap: wrap;
 }
 
-.workOutImg {
+/* .workOutImg {
   width: 100%;
-}
+} */
 
 .workOutListWrapper {
   display: flex;
@@ -157,3 +157,20 @@ input {
 .workOutContainer {
   border: black;
 }
+
+.create-form-container{
+  display: flex;
+flex-direction: column;
+  margin: auto;
+  padding: 3vmin;
+  background-color: #808080;
+  border: 0.1vmin solid;
+  
+  
+ 
+}
+
+.create-body{
+
+  
+  }
