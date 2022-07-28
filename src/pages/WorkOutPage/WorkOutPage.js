@@ -23,7 +23,7 @@ export default function WorkOutPage({ setChoosenWorkOut }) {
     return (
         <div className="workOutBackGround">
             <h1 className="workH">🦾WorkOut!🦾</h1>
-            <Link to='/createWorkouts'><button>Create Workout</button></Link>
+            {/* <Link to='/createWorkouts'><button>Create Workout</button></Link> */}
             <div className="workOutListWrapper">
                 {workOutList.map((workOut, i) => {
                     return (
