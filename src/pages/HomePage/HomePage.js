@@ -26,8 +26,6 @@ export default function HomePage({ user, setUser }) {
           and anyone else who loves to workout and would like a place to find info about
           workingOut and nutrition and supplements.
         </p>
-
-
       </AboutPopUp>
     </div>
   )

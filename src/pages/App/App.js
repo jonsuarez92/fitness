@@ -13,6 +13,8 @@ import Navbar from '../../components/NavBar/NavBar';
 import { getUser } from '../../utilities/users-service';
 import Createworkouts from '../createworkouts/createworkouts';
 import EditWorkOut from '../EditWorkOuts/EditWorkOut';
+import CreateSupplements from '../CreateSupplements/CreateSupplements';
+import EditSupplements from '../EditSupplements/EditSupplements';
 
 
 
@@ -20,7 +22,8 @@ function App() {
 
   const [user, setUser] = useState(getUser());
   const [choosenWorkOut, setChoosenWorkOut] = useState({})
-
+  const [choosenSupplements, setChoosenSupplements] = useState({})
+  const [choosenNutrition, setChoosenNutrition] = useState({})
   return (
 
 
@@ -35,8 +38,10 @@ function App() {
               <Route path="/editWorkouts/:id" element={< EditWorkOut choosenWorkOut={choosenWorkOut} />} />
               <Route path="/workouts" element={<WorkOutPage setChoosenWorkOut={setChoosenWorkOut} />} />
               <Route path="/workouts/:id" element={<WorkOutShowPage choosenWorkOut={choosenWorkOut} />} />
-              <Route path="/supps" element={<SuppsPages user={user} setUser={setUser} />} />
-              <Route path="/supps/:id" element={<SuppsShowPage user={user} setUser={setUser} />} />
+              <Route path="/CreateSupplements" element={< CreateSupplements />} />
+              <Route path="/editSupplements/:id" element={< EditSupplements choosenSupplements={choosenSupplements} />} />
+              <Route path="/supps" element={<SuppsPages setChoosenSupplements={setChoosenSupplements} />} />
+              <Route path="/supps/:id" element={<SuppsShowPage choosenSupplements={choosenSupplements} />} />
               <Route path="/nutrition" element={<NutritionPage user={user} setUser={setUser} />} />
               <Route path="/nutrition/:id" element={<NutruitionShowPage user={user} setUser={setUser} />} />
             </Routes>
