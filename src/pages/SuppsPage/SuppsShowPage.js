@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const SuppsShowPage = ({ choosenSupplements }) => {
     const { id } = useParams()
@@ -23,7 +24,7 @@ const SuppsShowPage = ({ choosenSupplements }) => {
             <p className="supDeal">{`${choosenSupplements.goodDetail}`}</p>
 
             <a href={`/supps`}><button>Back button</button></a>
-
+            < Link to={`/editSupplements/${choosenSupplements._id}`}><button>Edit button</button></Link>
         </div>
 
 

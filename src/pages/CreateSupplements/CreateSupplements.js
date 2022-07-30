@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router'
 
-const CreateSupplements = () => {
+const CreateSupplements = (props) => {
     const navigate = useNavigate();
     const img = useRef();
     const name = useRef();
