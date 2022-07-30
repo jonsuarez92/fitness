@@ -32,8 +32,8 @@ export default function SuppsPages({ setChoosenSupplements }) {
                         //     {console.log(nut.img)}
                         //     <p>{` ${nut.des}`}</p>
                         //  </div>
-                        <Link onClick={() => { setChoosenSupplements(sup) }} to={`/supps/${sup._id}`}>
-                            <div key={i} className="card" style={{ width: "18rem" }}>
+                        <Link key={i} onClick={() => { setChoosenSupplements(sup) }} to={`/supps/${sup._id}`}>
+                            <div className="card" style={{ width: "18rem" }}>
                                 <img className="card-img-top" src={sup.img} alt="" alt="Card image cap" />
                                 <div className="card-body">
                                     <h5 className="card-title">{sup.name}</h5>

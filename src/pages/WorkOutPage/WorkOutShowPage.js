@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom'
 
 
 
-const WorkOutShowPage = ({ choosenWorkOut }) => {
+const WorkOutShowPage = ({ choosenWorkOut, user }) => {
+    //params is state that last through a refresh they good to use on some index pages and 
+    //show pages every show page you would want to use params.
     const { id } = useParams()
     const [show, setShow] = useState({})
 
@@ -26,7 +28,11 @@ const WorkOutShowPage = ({ choosenWorkOut }) => {
             <p className="supDeal">{choosenWorkOut.des}</p>
 
             <a href={`/Workouts`}><button>Back button</button></a>
-            < Link to={`/editworkouts/${choosenWorkOut._id}`}><button>Edit button</button></Link>
+            {/* the below code refernce ro a admin see this button only */}
+            {user.admin ? < Link to={`/editworkouts/${choosenWorkOut._id}`}><button>Edit button</button></Link> : ''}
+
+
+
             {choosenWorkOut.img1 ? <img className="imgWorkOuts" src={choosenWorkOut.img1} /> : ""}
             {choosenWorkOut.img2 ? <img className="imgWorkOuts" src={choosenWorkOut.img2} /> : ""}
             {choosenWorkOut.img3 ? <img className="imgWorkOuts" src={choosenWorkOut.img3} /> : ""}

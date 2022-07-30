@@ -15,6 +15,7 @@ import Createworkouts from '../createworkouts/createworkouts';
 import EditWorkOut from '../EditWorkOuts/EditWorkOut';
 import CreateSupplements from '../CreateSupplements/CreateSupplements';
 import EditSupplements from '../EditSupplements/EditSupplements';
+import { useEffect } from 'react';
 
 
 
@@ -24,6 +25,8 @@ function App() {
   const [choosenWorkOut, setChoosenWorkOut] = useState({})
   const [choosenSupplements, setChoosenSupplements] = useState({})
   const [choosenNutrition, setChoosenNutrition] = useState({})
+
+
   return (
 
 
@@ -31,28 +34,28 @@ function App() {
       {user ?
         user.admin ?
           <>
-            <Navbar />
+            <Navbar user={user} />
             <Routes>
               <Route path="/" element={<HomePage user={user} setUser={setUser} />} />
               <Route path="/createWorkouts" element={< Createworkouts />} />
               <Route path="/editWorkouts/:id" element={< EditWorkOut choosenWorkOut={choosenWorkOut} />} />
               <Route path="/workouts" element={<WorkOutPage setChoosenWorkOut={setChoosenWorkOut} />} />
-              <Route path="/workouts/:id" element={<WorkOutShowPage choosenWorkOut={choosenWorkOut} />} />
+              <Route path="/workouts/:id" element={<WorkOutShowPage choosenWorkOut={choosenWorkOut} user={user} />} />
               <Route path="/CreateSupplements" element={< CreateSupplements />} />
               <Route path="/editSupplements/:id" element={< EditSupplements choosenSupplements={choosenSupplements} />} />
               <Route path="/supps" element={<SuppsPages setChoosenSupplements={setChoosenSupplements} />} />
               <Route path="/supps/:id" element={<SuppsShowPage choosenSupplements={choosenSupplements} />} />
-              <Route path="/nutrition" element={<NutritionPage user={user} setUser={setUser} />} />
-              <Route path="/nutrition/:id" element={<NutruitionShowPage user={user} setUser={setUser} />} />
+              <Route path="/nutrition" element={<NutritionPage user={user} />} />
+              <Route path="/nutrition/:id" element={<NutruitionShowPage user={user} />} />
             </Routes>
           </>
           :
           <>
-            <Navbar />
+            <Navbar user={user} />
             <Routes>
               <Route path="/" element={<HomePage user={user} setUser={setUser} />} />
               <Route path="/workouts" element={<WorkOutPage setChoosenWorkOut={setChoosenWorkOut} />} />
-              <Route path="/workouts/:id" element={<WorkOutShowPage choosenWorkOut={choosenWorkOut} />} />
+              <Route path="/workouts/:id" element={<WorkOutShowPage choosenWorkOut={choosenWorkOut} user={user} />} />
               <Route path="/supps" element={<SuppsPages user={user} setUser={setUser} />} />
               <Route path="/supps/:id" element={<SuppsShowPage user={user} setUser={setUser} />} />
               <Route path="/nutrition" element={<NutritionPage user={user} setUser={setUser} />} />
