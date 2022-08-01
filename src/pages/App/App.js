@@ -46,7 +46,7 @@ function App() {
               <Route path="/CreateSupplements" element={< CreateSupplements />} />
               <Route path="/editSupplements/:id" element={< EditSupplements choosenSupplements={choosenSupplements} />} />
               <Route path="/supps" element={<SuppsPages setChoosenSupplements={setChoosenSupplements} />} />
-              <Route path="/supps/:id" element={<SuppsShowPage choosenSupplements={choosenSupplements} />} />
+              <Route path="/supps/:id" element={<SuppsShowPage choosenSupplements={choosenSupplements} user={user} />} />
               <Route path="/CreateNutrition" element={< CreateNutrition />} />
               <Route path="/EditNutrition/:id" element={<EditNutrition choosenNutrition={choosenNutrition} />} />
               <Route path="/nutrition" element={<NutritionPage setChoosenNutrition={setChoosenNutrition} />} />
@@ -58,7 +58,7 @@ function App() {
             <Navbar user={user} />
             <Routes>
               <Route path="/" element={<HomePage user={user} setUser={setUser} />} />
-              <Route path="/workouts" element={<WorkOutPage setChoosenWorkOut={setChoosenWorkOut} />} />
+              <Route path="/workouts" element={<WorkOutPage setChoosenWorkOut={setChoosenWorkOut} user={user} />} />
               <Route path="/workouts/:id" element={<WorkOutShowPage choosenWorkOut={choosenWorkOut} user={user} />} />
               <Route path="/supps" element={<SuppsPages setChoosenSupplements={setChoosenSupplements} user={user} />} />
               <Route path="/supps/:id" element={<SuppsShowPage choosenSupplements={choosenSupplements} user={user} />} />
