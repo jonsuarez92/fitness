@@ -71,15 +71,15 @@ export default function EditWorkouts({ choosenWorkOut }) {
                         <p>Details Of Workout</p>
                         <textarea defaultValue={choosenWorkOut.details} placeholder='Enter a image' type="text" ref={details} />
                         <p>Image 1 Of Workout</p>
-                        <input placeholder='Enter Day of workout' type="text" ref={img1} />
+                        <input placeholder='Enter image of workout' type="text" ref={img1} />
                         <p>Image 2 Of Workout</p>
-                        <input placeholder='Enter Day of workout' type="text" ref={img2} />
+                        <input placeholder='Enter image of workout' type="text" ref={img2} />
                         <p>Image 3 Of Workout</p>
-                        <input placeholder='Enter Day of workout' type="text" ref={img3} />
+                        <input placeholder='Enter image of workout' type="text" ref={img3} />
                         <p>Image 4 Of Workout</p>
-                        <input placeholder='Enter Day of workout' type="text" ref={img4} />
+                        <input placeholder='Enter image of workout' type="text" ref={img4} />
                         <p>Image 5 Of Workout</p>
-                        <input placeholder='Enter Day of workout' type="text" ref={img5} />
+                        <input placeholder='Enter image of workout' type="text" ref={img5} />
                         <p>Category For Workouts</p>
                         <input defaultValue={choosenWorkOut.category} placeholder='Enter a image' type="text" ref={category} />
                         <p>description Of Workouts</p>

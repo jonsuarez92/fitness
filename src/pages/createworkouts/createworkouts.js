@@ -55,15 +55,15 @@ export default function CreateWorkouts(props) {
                 <p>Details Of Workout</p>
                 <textarea placeholder='Enter details of workout' type="text" ref={details} />
                 <p>Image 1 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img1} />
+                <input placeholder='Enter image of workout' type="text" ref={img1} />
                 <p>Image 2 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img2} />
+                <input placeholder='Enter image of workout' type="text" ref={img2} />
                 <p>Image 3 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img3} />
+                <input placeholder='Enter image of workout' type="text" ref={img3} />
                 <p>Image 4 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img4} />
+                <input placeholder='Enter image of workout' type="text" ref={img4} />
                 <p>Image 5 Of Workout</p>
-                <input placeholder='Enter Day of workout' type="text" ref={img5} />
+                <input placeholder='Enter image of workout' type="text" ref={img5} />
                 <p>Category For Workouts</p>
                 <input placeholder='Enter category of workout' type="text" ref={category} />
                 <p>description Of Workouts</p>
