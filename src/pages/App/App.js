@@ -45,8 +45,8 @@ function App() {
               <Route path="/editSupplements/:id" element={< EditSupplements choosenSupplements={choosenSupplements} />} />
               <Route path="/supps" element={<SuppsPages setChoosenSupplements={setChoosenSupplements} />} />
               <Route path="/supps/:id" element={<SuppsShowPage choosenSupplements={choosenSupplements} />} />
-              <Route path="/nutrition" element={<NutritionPage user={user} />} />
-              <Route path="/nutrition/:id" element={<NutruitionShowPage user={user} />} />
+              <Route path="/nutrition" element={<NutritionPage setChoosenNutrition={setChoosenNutrition} />} />
+              <Route path="/nutrition/:id" element={<NutruitionShowPage choosenNutrition={choosenNutrition} />} />
             </Routes>
           </>
           :
