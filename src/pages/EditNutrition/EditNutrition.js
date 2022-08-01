@@ -57,8 +57,6 @@ const EditNutrition = ({ choosenNutrition }) => {
                 <input defaultValue={choosenNutrition.img} placeholder='Enter a image' type="text" ref={img} />
                 <p>Name Of Nutrition</p>
                 <input defaultValue={choosenNutrition.name} placeholder='Enter Day of Nutrition' type="text" ref={name} />
-                {/* <p>Details Of Nutrition</p>
-                <textarea defaultValue={choosenNutrition.detail} placeholder='Enter details of nutrition' type="text" ref={detail} /> */}
                 <p>Good Details Of Nutrition</p>
                 <textarea defaultValue={choosenNutrition.goodDetail} placeholder='Enter good details of nutrition' type="text" ref={goodDetail} />
                 <p>Bad Details Of Nutrition</p>
