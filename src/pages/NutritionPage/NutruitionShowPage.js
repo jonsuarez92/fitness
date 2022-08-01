@@ -2,8 +2,9 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-const NutruitionShowPage = ({ choosenNutrition }) => {
+const NutruitionShowPage = ({ choosenNutrition, user }) => {
     const { id } = useParams()
     const [show, setShow] = useState({})
 
@@ -25,7 +26,7 @@ const NutruitionShowPage = ({ choosenNutrition }) => {
             <p className="deal">{`${choosenNutrition.badDetail}`}</p>
 
             <a href={`/nutrition`}><button>Back button</button></a>
-
+            {user.admin ? < Link to={`/EditNutrition/${choosenNutrition._id}`}><button>Edit button</button></Link> : ''}
         </div>
 
     )
