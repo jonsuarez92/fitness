@@ -27,6 +27,9 @@ const Navbar = ({ user }) => {
               <li className="nav-item">
                 <a className="nav-link" href="/CreateSupplements">Create Supplements</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/CreateNutrition">Create Nutrition</a>
+              </li>
             </> : ""}
 
         </ul>

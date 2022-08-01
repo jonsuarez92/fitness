@@ -15,7 +15,8 @@ import Createworkouts from '../createworkouts/createworkouts';
 import EditWorkOut from '../EditWorkOuts/EditWorkOut';
 import CreateSupplements from '../CreateSupplements/CreateSupplements';
 import EditSupplements from '../EditSupplements/EditSupplements';
-import { useEffect } from 'react';
+import CreateNutrition from '../CreateNutrition/CreateNutrition';
+
 
 
 
@@ -45,6 +46,7 @@ function App() {
               <Route path="/editSupplements/:id" element={< EditSupplements choosenSupplements={choosenSupplements} />} />
               <Route path="/supps" element={<SuppsPages setChoosenSupplements={setChoosenSupplements} />} />
               <Route path="/supps/:id" element={<SuppsShowPage choosenSupplements={choosenSupplements} />} />
+              <Route path="/CreateNutrition" element={< CreateNutrition />} />
               <Route path="/nutrition" element={<NutritionPage setChoosenNutrition={setChoosenNutrition} />} />
               <Route path="/nutrition/:id" element={<NutruitionShowPage choosenNutrition={choosenNutrition} />} />
             </Routes>
