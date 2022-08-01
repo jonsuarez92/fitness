@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 
 
-export default function NutritionPage(props) {
+export default function NutritionPage({ setChoosenNutrition }) {
     const [nutList, setNutList] = useState([])
 
     useEffect(() => {
@@ -32,7 +32,7 @@ export default function NutritionPage(props) {
                         //     {console.log(nut.img)}
                         //     <p>{` ${nut.des}`}</p>
                         //  </div>
-                        <Link key={i} to={`/nutrition/${nut._id}`}>
+                        <Link key={i} onClick={() => { setChoosenNutrition(nut) }} to={`/nutrition/${nut._id}`}>
 
                             <div className="card" style={{ width: "18rem" }}>
                                 <img className="card-img-top" src={nut.img} alt="" alt="Card image cap" />

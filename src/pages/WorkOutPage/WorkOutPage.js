@@ -37,8 +37,8 @@ export default function WorkOutPage({ setChoosenWorkOut }) {
 
                         //If your on click has a function that requires props you have to wrap it in 
                         //a arrow function otherwise you dont have to
-                        <Link onClick={() => { setChoosenWorkOut(workOut) }} to={`/workouts/${workOut._id}`}>
-                            <div key={i} className="card" style={{ width: "18rem" }}>
+                        <Link key={i} onClick={() => { setChoosenWorkOut(workOut) }} to={`/workouts/${workOut._id}`}>
+                            <div className="card" style={{ width: "18rem" }}>
                                 <img className="card-img-top" src={workOut.bannerImg} alt="" alt="card image cap" />
                                 <div className="card-body" >
                                     <h5 className="card-title">{workOut.name}</h5>

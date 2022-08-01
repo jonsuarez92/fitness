@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
-import UserLogOut from '../../components/UserLogOut/UserLogOut';
+
 
 export default function SuppsPages({ setChoosenSupplements }) {
     const [supList, setSupList] = useState([])
