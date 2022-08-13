@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 //get info towards w.e you pointing it to useref
 import { useRef } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router'
+import { uploadImage } from '../../utilities/imageUpload';
 
 
 
@@ -27,7 +28,7 @@ export default function CreateWorkouts(props) {
         try {
             // try is where we building the object csac hdskvk
             await axios.post('/api/workouts', {
-                bannerImg: bannerImg.current.value,
+                bannerImg: workOutMainImage,
                 name: name.current.value,
                 details: details.current.value,
                 category: category.current.value,
@@ -43,13 +44,44 @@ export default function CreateWorkouts(props) {
             console.log(err)
         }
     }
+
+    //below is what ill need to make could stufff work 
+    const [files, setFiles] = useState([])
+    const [body, setBody] = useState({ img: '' })
+    const [workOutMainImage, setWorkOutMainImage] = useState('')
+
+    const upload = async () => {
+        //FormData() class that stores data in a {}
+        const formData = new FormData()
+        //apppend is express function
+        formData.append('file', files[0])
+        formData.append('upload_preset', 'gkwoq2h0')
+        // console.log(formData)
+        const response = await uploadImage(formData)
+        console.log(response)
+        setBody({ img: response })
+        setWorkOutMainImage(response)
+    }
+
+    const handleFiles = (evt) => {
+        setFiles(evt.target.files)
+    }
+
     return (
 
         <div className="create-body" >
             <h1>Creating New Workout</h1>
             <form className="create-form-container" onSubmit={handleSubmit}>
                 <p>Image</p>
-                <input placeholder='Enter a image' type="text" ref={bannerImg} />
+                {/* form starts here to have the functionality to work to 
+                add a file and upload the file to cloud and web page */}
+                <div >
+                    <label >
+                        <input type='file' name='img' onChange={handleFiles} />
+                    </label>
+                    <button type='button' onClick={upload}>{body.img ? "Image Uploaded" : "Upload Image"}</button>
+                </div>
+                {/* ends here for cloud stuff */}
                 <p>Name Of Workout</p>
                 <input placeholder='Enter Day of workout' type="text" ref={name} />
                 <p>Details Of Workout</p>

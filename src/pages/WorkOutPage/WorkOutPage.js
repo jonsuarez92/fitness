@@ -27,14 +27,6 @@ export default function WorkOutPage({ setChoosenWorkOut }) {
             <div className="workOutListWrapper">
                 {workOutList.map((workOut, i) => {
                     return (
-                        //  <div key={i}>
-                        //      <Link to = {`/nutrition/${nut._id}`}>
-                        //     <h3>{`this item name is: ${nut.name}`}</h3></Link>
-                        //     <img  src={nut.img} alt=""/>
-                        //     {console.log(nut.img)}
-                        //     <p>{` ${nut.des}`}</p>
-                        //  </div>
-
                         //If your on click has a function that requires props you have to wrap it in 
                         //a arrow function otherwise you dont have to
                         <Link key={i} onClick={() => { setChoosenWorkOut(workOut) }} to={`/workouts/${workOut._id}`}>
