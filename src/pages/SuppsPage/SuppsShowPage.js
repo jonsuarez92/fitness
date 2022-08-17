@@ -20,12 +20,14 @@ const SuppsShowPage = ({ choosenSupplements, user }) => {
     }, [])
     return (
         <div className="supBackGround">
+
             <h1 className="supH">{choosenSupplements.name}</h1>
             <p className="supDeal">{`${choosenSupplements.goodDetail}`}</p>
 
             <a href={`/supps`}><button>Back button</button></a>
             {user.admin ? < Link to={`/editSupplements/${choosenSupplements._id}`}><button>Edit button</button></Link> : ""}
         </div>
+
 
 
     )

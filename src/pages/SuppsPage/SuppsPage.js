@@ -20,6 +20,7 @@ export default function SuppsPages({ setChoosenSupplements }) {
     }, [])
     return (
         <div className="supBackGround">
+
             <h1 className="supH">Supplements</h1>
 
             <div className="nutListWrapper">
