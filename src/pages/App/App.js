@@ -20,7 +20,6 @@ import EditNutrition from '../EditNutrition/EditNutrition';
 
 
 
-
 function App() {
 
   const [user, setUser] = useState(getUser());
@@ -67,7 +66,11 @@ function App() {
             </Routes>
           </>
         :
+
         <AuthPage setUser={setUser} />
+
+
+
       }
     </main>
 
