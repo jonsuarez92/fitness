@@ -1,0 +1,15 @@
+.NutritionPages{
+    text-align: center;
+}
+
+@media (min-width: 480px) , (max-width: 1024px) {
+    body  {
+     background-image: url(https://img.mensxp.com/media/content/2018/Jul/there-no-such-thing-as-good-food-and-bad-food-1400x653-1531487950.jpg);
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     
+     height: 100vh;
+   }
+ }

@@ -104,14 +104,26 @@ input {
 .card-body {
   overflow: scroll;
 }
-.nutBackGround {
+/* .nutBackGround {
   background-image: url(https://img.mensxp.com/media/content/2018/Jul/there-no-such-thing-as-good-food-and-bad-food-1400x653-1531487950.jpg);
   background-size: cover;
   background-position: center;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   width: 100%;
   height: 110vh;
-}
+} */
+
+/* @media (min-width: 480px) , (max-width: 1024px) {
+  .nutBackGround {
+    background-image: url(https://img.mensxp.com/media/content/2018/Jul/there-no-such-thing-as-good-food-and-bad-food-1400x653-1531487950.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    height: 100vh;
+  }
+} */
 .deal {
   color: rgb(29, 149, 204);
   font-size: large;
@@ -121,14 +133,26 @@ input {
 .supH {
   color: gold;
 }
-.supBackGround {
+/* .supBackGround {
   background-image: url(https://www.mensjournal.com/wp-content/uploads/2021/04/proteinpowdermain.jpg?w=1800&h=1012&crop=1&quality=86&strip=all);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 110vh;
-}
+} */
+
+/* @media (min-width: 480px) , (max-width: 1024px) {
+   .supBackGround  {
+    background-image: url(https://www.mensjournal.com/wp-content/uploads/2021/04/proteinpowdermain.jpg?w=1800&h=1012&crop=1&quality=86&strip=all);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+    height: 100vh;
+  }
+} */
 .supDeal {
   color: rgb(250, 249, 246);
   font-size: large;
@@ -140,12 +164,27 @@ input {
 .workH {
   color: whitesmoke;
 }
-.workOutBackGround {
+/* .workOutBackGround {
   background-image: url(https://img1.goodfon.com/original/1920x1168/7/26/shtanga-trenazhernyy-zal-gym.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-}
+} */
+/* @media (min-width: 480px) , (max-width: 1024px) {
+   body  {
+    background-image: url(https://img1.goodfon.com/original/1920x1168/7/26/shtanga-trenazhernyy-zal-gym.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    height: 100vh;
+  }
+} */
+
+
 .row-flex {
   display: flex;
   flex-wrap: wrap;
@@ -177,6 +216,7 @@ flex-direction: column;
   
  
 }
+  
 
 /* .create-body{
 
