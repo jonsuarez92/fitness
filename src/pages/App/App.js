@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom'
 import NutruitionShowPage from '../NutritionPage/NutruitionShowPage';
 import SuppsPages from '../SuppsPage/SuppsPage';
 import SuppsShowPage from '../SuppsPage/SuppsShowPage';
-import Navbar from '../../components/NavBar/NavBar';
+import Navbars from '../../components/NavBar/NavBar';
 import { getUser } from '../../utilities/users-service';
 import Createworkouts from '../createworkouts/createworkouts';
 import EditWorkOut from '../EditWorkOuts/EditWorkOut';
@@ -36,7 +36,7 @@ function App() {
       {user ?
         user.admin ?
           <>
-            <Navbar user={user} />
+            <Navbars user={user} />
             <Routes>
               <Route path="/" element={<HomePage user={user} setUser={setUser} />} />
               <Route path="/createWorkouts" element={< Createworkouts />} />
@@ -55,7 +55,7 @@ function App() {
           </>
           :
           <>
-            <Navbar user={user} />
+            <Navbars user={user} />
             <Routes>
               <Route path="/" element={<HomePage user={user} setUser={setUser} />} />
               <Route path="/workouts" element={<WorkOutPage setChoosenWorkOut={setChoosenWorkOut} user={user} />} />
