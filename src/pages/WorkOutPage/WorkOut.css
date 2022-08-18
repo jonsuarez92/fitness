@@ -15,5 +15,12 @@
  @media (min-width: 0) and (max-width: 480px) {
   .workOutBackGround { 
    background-color: rgb(81,81,81) ;
+   -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-attachment: fixed;
+     background-size: cover;
+     background-position: center;
+     height: 300vh;
  }
 }
