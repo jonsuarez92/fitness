@@ -14,3 +14,9 @@
      height: 300vh;
    }
  }
+
+ @media (min-width: 0) and (max-width: 480px) {
+  .nutBackGround { 
+   background-color: rgb(234,234,234) ;
+ }
+}

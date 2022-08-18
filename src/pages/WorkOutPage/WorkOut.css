@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-@media (min-width: 300px) and (max-width: 1400px) {
+@media (min-width: 480px) and (max-width: 1400px) {
     .workOutBackGround { 
      background-image: url(https://img1.goodfon.com/original/1920x1168/7/26/shtanga-trenazhernyy-zal-gym.jpg) !important ;
      background-attachment: fixed;
@@ -12,3 +12,8 @@
      height: 300vh;
    }
  }
+ @media (min-width: 0) and (max-width: 480px) {
+  .workOutBackGround { 
+   background-color: rgb(81,81,81) ;
+ }
+}
