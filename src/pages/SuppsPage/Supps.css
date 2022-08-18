@@ -1,7 +1,7 @@
 .SuppsPages {
 text-align: center;
 }
-@media (min-width: 480px) and (max-width: 1400px) {
+@media (min-width: 300px) and (max-width: 1400px) {
   .supBackGround{
      background-image: url(https://www.mensjournal.com/wp-content/uploads/2021/04/proteinpowdermain.jpg?w=1800&h=1012&crop=1&quality=86&strip=all) !important ;
      background-attachment: fixed;
