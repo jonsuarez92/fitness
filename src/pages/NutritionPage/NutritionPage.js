@@ -21,7 +21,7 @@ export default function NutritionPage({ setChoosenNutrition }) {
     }, [])
     return (
         <div className="nutBackGround">
-            <h1>Good Vs Bad</h1>
+            <h1 >Good Vs Bad</h1>
 
             <div className="nutListWrapper">
                 {nutList.map((nut, i) => {

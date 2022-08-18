@@ -63,7 +63,7 @@ const Navbars = ({ user }) => {
                   <NavDropdown.Item href="/CreateSupplements">
                     Create Supplements
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/CreateNutrition">Create Supplements</NavDropdown.Item>
+                  <NavDropdown.Item href="/CreateNutrition">Create Nutrition</NavDropdown.Item>
                   <NavDropdown.Divider />
 
                 </NavDropdown>
