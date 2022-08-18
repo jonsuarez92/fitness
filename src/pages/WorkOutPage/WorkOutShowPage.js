@@ -32,13 +32,13 @@ const WorkOutShowPage = ({ choosenWorkOut, user }) => {
             {user.admin ? < Link to={`/editworkouts/${choosenWorkOut._id}`}><button>Edit button</button></Link> : ''}
 
 
-
-            {choosenWorkOut.img1 ? <img className="imgWorkOuts" src={choosenWorkOut.img1} /> : ""}
-            {choosenWorkOut.img2 ? <img className="imgWorkOuts" src={choosenWorkOut.img2} /> : ""}
-            {choosenWorkOut.img3 ? <img className="imgWorkOuts" src={choosenWorkOut.img3} /> : ""}
-            {choosenWorkOut.img4 ? <img className="imgWorkOuts" src={choosenWorkOut.img4} /> : ""}
-            {choosenWorkOut.img5 ? <img className="imgWorkOuts" src={choosenWorkOut.img5} /> : ""}
-
+            <div className="imgWorkOuts">
+                {choosenWorkOut.img1 ? <img className="imgWorkOuts" src={choosenWorkOut.img1} /> : ""}
+                {choosenWorkOut.img2 ? <img className="imgWorkOuts" src={choosenWorkOut.img2} /> : ""}
+                {choosenWorkOut.img3 ? <img className="imgWorkOuts" src={choosenWorkOut.img3} /> : ""}
+                {choosenWorkOut.img4 ? <img className="imgWorkOuts" src={choosenWorkOut.img4} /> : ""}
+                {choosenWorkOut.img5 ? <img className="imgWorkOuts" src={choosenWorkOut.img5} /> : ""}
+            </div>
         </div>
 
     )

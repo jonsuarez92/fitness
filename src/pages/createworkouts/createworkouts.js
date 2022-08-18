@@ -77,7 +77,7 @@ export default function CreateWorkouts(props) {
                 add a file and upload the file to cloud and web page */}
                 <div >
                     <label >
-                        <input type='file' name='img' onChange={handleFiles} />
+                        <input type='file' name='img' onChange={handleFiles} ref={bannerImg} />
                     </label>
                     <button type='button' onClick={upload}>{body.img ? "Image Uploaded" : "Upload Image"}</button>
                 </div>
