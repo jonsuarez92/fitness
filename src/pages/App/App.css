@@ -88,6 +88,7 @@ input {
 }
 .authH {
   color: gold;
+  /* cursor: grabbing; */
 }
 
 .nutListWrapper {
@@ -226,6 +227,11 @@ flex-direction: column;
   margin: 10px; 
 }
 
+
+
+button{
+  cursor: pointer;
+}
 
 
 
