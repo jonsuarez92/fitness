@@ -23,8 +23,8 @@ const WorkOutShowPage = ({ choosenWorkOut, user }) => {
         })()
     }, [])
     return (
-        <div className="supBackGround">
-            <h1 className="supH">{choosenWorkOut.name}</h1>
+        <div className="workOutBackGround">
+            <h1 className="workH">{choosenWorkOut.name}</h1>
             <p className="supDeal">{choosenWorkOut.des}</p>
 
             <a href={`/Workouts`}><button>Back button</button></a>
